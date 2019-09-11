@@ -10,8 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import NavBar from "./globals/navbar"
+
 import "bootstrap/dist/css/bootstrap.min.css"
-//import "./layout.css"
+import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,7 +28,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <NavBar />
       <div
         style={{
           margin: `0 auto`,
