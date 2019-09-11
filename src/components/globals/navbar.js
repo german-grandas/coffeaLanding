@@ -5,7 +5,7 @@ import logo from "../../images/logo.svg"
 export default class Navbar extends Component {
   state = {
     navBarOpen: false,
-    css: "collapse navbar-collapse show",
+    css: "collapse navbar-collapse",
     links: [
       { id: 1, path: "/", text: "Home" },
       { id: 2, path: "/acerca", text: "Acerca De" },

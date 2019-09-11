@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Coffea Shop`,
     description: `Entregamos sensaciones directamente a la puerta de tu casa!`,
-    author: `@gatsbyjs`,
+    author: `@grandas`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

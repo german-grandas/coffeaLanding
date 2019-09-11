@@ -10,6 +10,8 @@ html {
   --mainWhite: #ffffff;
   --mainDark: #222;
 }
+/*fonts */
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 
 body {
   margin: 0;
@@ -26,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Courier New", "Courier", monospace !important;
+  font-family: "Pacifico", "Courier New", "Courier", monospace !important;
   letter-spacing: 0.25rem !important;
 }
 
@@ -35,8 +37,76 @@ h6 {
 }
 
 nav {
-  background: #3b883e;
+  background: rgb(59, 136, 62);
+  font-family: "Pacifico", "Courier New", "Courier", monospace !important;
 }
+
+.default-background  {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgb(59, 136, 62, 0.5), rgb(59, 136, 62, 0.5));
+  background-position: center;
+  background-size: cover;
+}
+.acerca-background{
+  min-height: 50vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgb(59, 136, 62, 0.5), rgb(59, 136, 62, 0.5));
+  background-position: center;
+  background-size: cover;
+}
+.text-acerca{
+  color : var(--mainGrey);
+}
+.btn-green {
+  color: rgb(59, 136, 62);
+  border-color: rgb(59, 136, 62, 0.9);
+}
+.btn-green:hover {
+  background: rgb(59, 136, 62);
+  color: rgb(236, 240, 241) !important;
+}
+
+.footer {
+  background: rgb(59, 136, 62);
+}
+/* typeWriting */
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
 article,
 aside,
 details,
