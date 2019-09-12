@@ -29,8 +29,8 @@ export default class Navbar extends Component {
           <img
             src={logo}
             alt="logo"
-            width="120"
-            height="120"
+            width="100"
+            height="100"
             className="d-inline-block align-top"
           />
           {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon

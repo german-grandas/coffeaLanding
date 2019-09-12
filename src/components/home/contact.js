@@ -44,7 +44,7 @@ export default function Contact() {
             {/*submit*/}
             <button
               type="submit"
-              className="btn btn-yellow btn-block text-capitalize mt-5"
+              className="btn btn-green btn-block text-capitalize mt-5"
             >
               Enviar
             </button>

@@ -23,6 +23,7 @@ const IndexPage = ({ data }) => (
       img={data.img.childImageSharp.fluid}
       title="Coffea Shop"
       styleClass="default-background"
+      textColor="text-white"
     />
     <Info />
     <Contact />

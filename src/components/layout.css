@@ -4,8 +4,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 :root {
-  --mainBrown: #ccba89;
-  --mainYellow: #ff9e09;
+  --mainBrown: #40b6ca;
+  --mainYellow: rgba(193, 204, 32, 0.89);
   --mainGrey: #ece8dc;
   --mainWhite: #ffffff;
   --mainDark: #222;
@@ -36,8 +36,13 @@ h6 {
   color: var(--mainYellow);
 }
 
+.pacifico {
+  font-family: "Pacifico", monospace !important;
+  letter-spacing: 0.25rem !important;
+}
+/* rgba(193, 204, 32, 0.89) */
 nav {
-  background: rgb(59, 136, 62);
+  background: #40b6ca;
   font-family: "Pacifico", "Courier New", "Courier", monospace !important;
 }
 
@@ -60,33 +65,35 @@ nav {
   background-position: center;
   background-size: cover;
 }
-.text-acerca {
-  color: var(--mainGrey);
+.text-blue {
+  color: #40b6ca;
 }
 .btn-green {
-  color: rgb(59, 136, 62);
-  border-color: rgb(59, 136, 62, 0.9);
+  color: #40b6ca;
+  border-color: #40b6ca;
+  border-width: 0.21rem;
 }
 .btn-green:hover {
-  background: rgb(59, 136, 62);
+  background: #40b6ca;
   color: rgb(236, 240, 241) !important;
 }
 
+/* #c1cc20e3*/
 .footer {
-  background: rgb(59, 136, 62);
+  background: #40b6ca;
 }
 
 .contact {
-  background: var(--mainBrown);
+  background: linear-gradient(rgba(2, 2, 2, 0.1), rgb(59, 136, 62, 0.3));
 }
 
 .btn-yellow {
-  color: var(--mainDark);
-  border-color: rgb(59, 136, 62);
+  color: rgb(236, 240, 241);
+  border-color: rgba(193, 204, 32, 0.89);
   border-width: 0.2rem;
 }
 .btn-yellow:hover {
-  background: rgb(59, 136, 62);
+  background: rgba(193, 204, 32, 0.89);
   color: rgb(236, 240, 241) !important;
 }
 
