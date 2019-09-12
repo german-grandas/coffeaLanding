@@ -5,16 +5,27 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Background from "../components/globals/background"
 import Info from "../components/home/info"
+import Contact from "../components/home/contact"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`tienda de cafe`,`cafe`,`café de colombia`,`productores de café colombianos`,`venta directa de café colombiano`]}/>
+    <SEO
+      title="Home"
+      keywords={[
+        `tienda de cafe`,
+        `cafe`,
+        `café de colombia`,
+        `productores de café colombianos`,
+        `venta directa de café colombiano`,
+      ]}
+    />
     <Background
       img={data.img.childImageSharp.fluid}
       title="Coffea Shop"
       styleClass="default-background"
     />
     <Info />
+    <Contact />
   </Layout>
 )
 

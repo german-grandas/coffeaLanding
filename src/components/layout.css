@@ -4,7 +4,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 :root {
-  --mainBrown: #2d1ef1;
+  --mainBrown: #ccba89;
   --mainYellow: #ff9e09;
   --mainGrey: #ece8dc;
   --mainWhite: #ffffff;
@@ -41,7 +41,7 @@ nav {
   font-family: "Pacifico", "Courier New", "Courier", monospace !important;
 }
 
-.default-background  {
+.default-background {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -50,9 +50,9 @@ nav {
   background-position: center;
   background-size: cover;
 }
-.acerca-background{
+.acerca-background {
   min-height: 50vh;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,8 +60,8 @@ nav {
   background-position: center;
   background-size: cover;
 }
-.text-acerca{
-  color : var(--mainGrey);
+.text-acerca {
+  color: var(--mainGrey);
 }
 .btn-green {
   color: rgb(59, 136, 62);
@@ -75,6 +75,21 @@ nav {
 .footer {
   background: rgb(59, 136, 62);
 }
+
+.contact {
+  background: var(--mainBrown);
+}
+
+.btn-yellow {
+  color: var(--mainDark);
+  border-color: rgb(59, 136, 62);
+  border-width: 0.2rem;
+}
+.btn-yellow:hover {
+  background: rgb(59, 136, 62);
+  color: rgb(236, 240, 241) !important;
+}
+
 /* typeWriting */
 
 .typewriter {
