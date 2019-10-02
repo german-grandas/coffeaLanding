@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "000534080W.jpg" }) {
+    img: file(relativePath: { eq: "caffeine-coffee-cup-641038.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
