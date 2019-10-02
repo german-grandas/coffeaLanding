@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Background from "../components/globals/background"
 import Info from "../components/home/info"
 import Contact from "../components/home/contact"
+import Menu from "../components/home/menu"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -26,6 +27,7 @@ const IndexPage = ({ data }) => (
       textColor="text-white"
     />
     <Info />
+    <Menu items={data.menu} />
     <Contact />
   </Layout>
 )
@@ -36,6 +38,26 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    menu: allContentfulProduct {
+      edges {
+        node {
+          id
+          title
+          precio
+          acidez
+          cuerpo
+          variedad
+          descripcion {
+            descripcion
+          }
+          image {
+            fixed(width: 50, height: 50) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
         }
       }
     }

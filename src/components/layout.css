@@ -42,7 +42,7 @@ h6 {
 }
 /* rgba(193, 204, 32, 0.89) */
 nav {
-  background: #40b6ca;
+  background: #6ea4ad;
   font-family: "Pacifico", "Courier New", "Courier", monospace !important;
 }
 
@@ -77,10 +77,12 @@ nav {
   background: #40b6ca;
   color: rgb(236, 240, 241) !important;
 }
-
+.menu {
+  background: var(--mainGrey);
+}
 /* #c1cc20e3*/
 .footer {
-  background: #40b6ca;
+  background: #6ea4ad;
 }
 
 .contact {
