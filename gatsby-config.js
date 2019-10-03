@@ -7,6 +7,7 @@ module.exports = {
     title: `Coffea Shop`,
     description: `Entregamos sensaciones directamente a la puerta de tu casa!`,
     author: `@grandas`,
+    siteUrl: `https://coffeashop.netlify.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,16 +19,18 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `coffeaShop`,
+        short_name: `coffeaShop`,
         start_url: `/`,
+        lang: `es`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/coffeaLogo.svg`, // This path is relative to the root of the site.
       },
     },
@@ -47,6 +50,7 @@ module.exports = {
         host: `preview.contentful.com`,
       },
     },
+    `gatsby-plugin-offline`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
