@@ -41,26 +41,6 @@ export const query = graphql`
         }
       }
     }
-    menu: allContentfulProduct {
-      edges {
-        node {
-          id
-          title
-          precio
-          acidez
-          cuerpo
-          variedad
-          descripcion {
-            descripcion
-          }
-          image {
-            fixed(width: 50, height: 50) {
-              ...GatsbyContentfulFixed_tracedSVG
-            }
-          }
-        }
-      }
-    }
   }
 `
 export default IndexPage

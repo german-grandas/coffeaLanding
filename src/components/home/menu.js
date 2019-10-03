@@ -1,8 +1,67 @@
-import React, { Component } from "react"
-import Img from "gatsby-image"
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import Title from "./title"
+import Product from "./Product"
 
-export default class Menu extends Component {
+const query = graphql`
+  {
+    products: allContentfulProduct {
+      edges {
+        node {
+          id
+          title
+          precio
+          acidez
+          cuerpo
+          variedad
+          descripcion {
+            descripcion
+          }
+          image {
+            fluid(maxHeight: 426) {
+              src
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+const getCategories = items => {
+  let tempItems = items.map(items => {
+    return items.node.variedad
+  })
+  let categories = ["Todos", ...Array.from(new Set(tempItems))]
+  return categories
+}
+
+export default function Menu() {
+  return (
+    <StaticQuery
+      query={query}
+      render={data => {
+        //let categories = getCategories(data.products.edges)
+
+        return (
+          <section className="py-5">
+            <div className="container">
+              <Title title="Te ofrecemos..." />
+              <div className="row mb-5">
+                {data.products.edges.map(({ node: product }) => {
+                  return <Product key={product.id} product={product} />
+                })}
+              </div>
+            </div>
+          </section>
+        )
+      }}
+    />
+  )
+}
+
+/*export default class Menu extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -19,7 +78,14 @@ export default class Menu extends Component {
     let categories = ["Todos", ...Array.from(new Set(tempItems))]
     return categories
   }
-  handleItems = () => {}
+  handleItems = category => {
+    let tempItems = [...this.state.items]
+    category === "Todos"
+      ? this.setState({ filtered: tempItems })
+      : this.setState({
+          filtered: tempItems.filter(({ node }) => node.variedad === category),
+        })
+  }
   render() {
     let { items, filtered, categories } = this.state
 
@@ -27,6 +93,22 @@ export default class Menu extends Component {
       <section className="menu py-5">
         <div className="container">
           <Title title="Te ofrecemos..." />
+          <div className="row mb-5">
+            <div className="col-10 mx-auto text-center">
+              {categories.map((category, index) => (
+                <button
+                  type="button"
+                  key={index}
+                  className="btn btn-green text-capitalize m-3"
+                  onClick={() => {
+                    this.handleItems(category)
+                  }}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
           <div className="row mb-5">
             {items.length > 0 ? (
               filtered.map(({ node }) => {
@@ -62,4 +144,4 @@ export default class Menu extends Component {
       </section>
     )
   }
-}
+}*/

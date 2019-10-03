@@ -80,6 +80,12 @@ nav {
 .menu {
   background: var(--mainGrey);
 }
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 2rem;
+  color: rgba(193, 204, 32, 0.89);
+}
 /* #c1cc20e3*/
 .footer {
   background: #6ea4ad;
